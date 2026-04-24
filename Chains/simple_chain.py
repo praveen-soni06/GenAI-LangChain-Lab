@@ -22,3 +22,5 @@ chain = prompt | model | parser
 result = chain.invoke({'topic':'uno'})
 
 print(result)
+
+print(chain.get_graph().draw_ascii())
