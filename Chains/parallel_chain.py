@@ -9,12 +9,10 @@ load_dotenv()
 llm1 = HuggingFaceEndpoint(repo_id='Qwen/Qwen2.5-72B-Instruct',
                           task='text-generation',
                           max_new_tokens=512)
-llm2 = HuggingFaceEndpoint(repo_id='Qwen/Qwen2.5-72B-Instruct',
-                          task='text-generation',
-                          max_new_tokens=512)
+
 
 model1 = ChatHuggingFace(llm = llm1)
-model2 = ChatHuggingFace(llm = llm2)
+model2 = ChatHuggingFace(llm = llm1)
 
 
 parser = StrOutputParser()
